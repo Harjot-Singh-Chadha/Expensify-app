@@ -5,7 +5,8 @@
   "main": "index.js",
   "scripts": {
     "server": "live-server public/",
-    "build": "webpack",
+    "build:dev": "webpack",
+    "build:prod": "webpack -p --env Production ",
     "dev-server": "webpack-dev-server",
     "test": "jest --config=jest.config.json"
   },
@@ -23,6 +24,7 @@
     "enzyme": "^3.10.0",
     "enzyme-adapter-react-16": "^1.15.1",
     "enzyme-to-json": "^3.4.3",
+    "extract-text-webpack-plugin": "^3.0.0",
     "jest": "^20.0.4",
     "live-server": "^1.2.0",
     "moment": "^2.24.0",
@@ -42,7 +44,7 @@
     "sass-loader": "^7.1.0",
     "style-loader": "^0.23.1",
     "uuid": "^3.3.3",
-    "webpack": "^4.38.0",
+    "webpack": "^3.1.0",
     "webpack-dev-server": "^3.7.2"
   },
   "devDependencies": {
