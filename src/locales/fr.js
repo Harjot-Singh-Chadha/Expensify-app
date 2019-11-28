@@ -2,7 +2,8 @@
 
  numeral.register('locale', 'fr', {
     delimiters: {
-        thousands: ' ',
+        thousands: ',',
+        hundreds: ',',
         decimal: '.'
     },
     abbreviations: {
