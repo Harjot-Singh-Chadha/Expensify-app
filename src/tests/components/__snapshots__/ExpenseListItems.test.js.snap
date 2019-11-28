@@ -11,9 +11,9 @@ exports[`Should render an expense item 1`] = `
   </Link>
   <p>
     Amount: 
-    195
+    ₹1.95
      - CreatedAt: 
-    <Component />
+    January 1st 1970
   </p>
 </div>
 `;
