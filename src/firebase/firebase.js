@@ -2,12 +2,14 @@ import * as firebase from 'firebase';
 import 'firebase/database';
 
 const firebaseConfig = {
-  apiKey: process.env.FIREBASE_API_KEY,
-  authDomain: process.env.FIREBASE_AUTH_DOMAIN,
-  databaseURL: process.env.FIREBASE_DATABASE_URL,
-  projectId: process.env.FIREBASE_PROJECT_ID,
-  storageBucket: process.env.FIREBASE_STORAGE_BUCKET,
-  messagingSenderId: process.env.FIREBASE_MESSAGING_SENDER_ID
+  apiKey: "AIzaSyAUSlAYlp4RQAPWqAnybrZgn7mih1ICskE",
+  authDomain: "expensify-db826.firebaseapp.com",
+  databaseURL: "https://expensify-db826.firebaseio.com",
+  projectId: "expensify-db826",
+  storageBucket: "expensify-db826.appspot.com",
+  messagingSenderId: "169868807373",
+  appId: "1:169868807373:web:63144d52db49bf01192d84",
+  measurementId: "G-SXT5F0F48S"
 };
 
   firebase.initializeApp(firebaseConfig);
