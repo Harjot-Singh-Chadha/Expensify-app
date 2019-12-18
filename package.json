@@ -48,6 +48,7 @@
     "webpack": "^3.1.0"
   },
   "devDependencies": {
+    "dotenv": "^8.2.0",
     "enzyme": "^3.10.0",
     "enzyme-to-json": "^3.4.3",
     "jest": "^20.0.4",
