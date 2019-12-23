@@ -13,7 +13,7 @@ import numeralCurrencyFormat from '../locales/fr';
        <h2>{description}</h2>
    </Link>
      <p >Amount: {numeral(amount / 100).format('$0,0.00')} - CreatedAt: {moment(createdAt).format('MMMM Do YYYY')}</p>
-     
+    
    </div>
   
 
