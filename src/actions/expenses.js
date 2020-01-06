@@ -24,9 +24,7 @@ export const startAddExpense = (expenseData = {}) => {
                 id:ref.key,
                 ...expense
             }))
-        .catch((err)=>{
-            console.log(err);
-        })
+       
         });
      };
 
