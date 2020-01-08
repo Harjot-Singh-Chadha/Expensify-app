@@ -18,8 +18,9 @@ const firebaseConfig = {
 
   const database = firebase.database();
   const googleAuthProvider = new firebase.auth.GoogleAuthProvider();
+  const facebookAuthprovider = new firebase.auth.FacebookAuthProvider();
 
-  export { firebase, googleAuthProvider, database as default };
+  export { firebase, googleAuthProvider, facebookAuthprovider, database as default };
 
 //   firebase.database().ref()
 //   .once('value')

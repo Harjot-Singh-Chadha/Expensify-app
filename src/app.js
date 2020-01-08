@@ -9,7 +9,8 @@ import 'normalize.css/normalize.css';
 import "./styles/styles.scss";
 import 'react-dates/initialize';
 import 'react-dates/lib/css/_datepicker.css';
-import { firebase } from './firebase/firebase';
+import { firebase, googleAuthProvider, facebookAuthProvider} from './firebase/firebase';
+
 
 
 const store = configureStore();
@@ -37,8 +38,10 @@ const renderApp = () => {
 
 ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
 
-firebase.auth().onAuthStateChanged((USER) => {
 
+firebase.auth().onAuthStateChanged((USER) => {
+  
+     console.log(USER)
     if(USER){
         store.dispatch(Login(USER.uid));
         store.dispatch(startSetExpense()).then(()=>{

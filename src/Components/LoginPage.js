@@ -1,12 +1,13 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { startLogin } from  '../actions/auth';
+import { startGoogleLogin, startFaceBookLogin } from  '../actions/auth';
 
-export const LoginPage = ({startLogin}) => (
+export const LoginPage = ({startGoogleLogin, startFaceBookLogin}) => (
 
   <div>
       <h1>Login here</h1>
-      <button onClick={startLogin} >Click here</button>
+      <button onClick={startGoogleLogin} >Google</button>
+      <button onClick={startFaceBookLogin} >FaceBook</button>
   </div>
     
 
@@ -14,7 +15,8 @@ export const LoginPage = ({startLogin}) => (
 
 const mapDispatchToProps = (dispatch) => ({
 
-   startLogin: () => dispatch(startLogin())
+  startGoogleLogin: () => dispatch(startGoogleLogin()),
+  startFaceBookLogin: () => dispatch(startFaceBookLogin())
 
 });
 
