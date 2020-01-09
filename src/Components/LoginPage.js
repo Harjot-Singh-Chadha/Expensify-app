@@ -7,7 +7,7 @@ export const LoginPage = ({startGoogleLogin, startFaceBookLogin}) => (
   <div>
       <h1>Login here</h1>
       <button onClick={startGoogleLogin} >Google</button>
-      <button onClick={startFaceBookLogin} >FaceBook</button>
+      {/* <button onClick={startFaceBookLogin} >FaceBook</button> */}
   </div>
     
 
