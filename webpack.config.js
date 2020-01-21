@@ -1,68 +1,55 @@
-const path = require('path');
-const ExtractTextPlugin = require('extract-text-webpack-plugin');
+const path = require("path");
+const ExtractTextPlugin = require("extract-text-webpack-plugin");
 
-module.exports = (env) => {
-    
-    const isProduction = env === 'Production';
-    const CssExtract = new ExtractTextPlugin('style.css');
-      
-    return {
+module.exports = env => {
+  const isProduction = env === "Production";
+  const CssExtract = new ExtractTextPlugin("style.css");
 
-        entry: "./src/app.js",
-        output : {
-            path: path.join(__dirname,'public', 'dist'),
-            filename:"bundle.js"
-        },
-        
-    
-        module: {
-           rules:[
-               { 
-                test:/\.js$/, 
-                loader:'babel-loader',
-                exclude: /node_modules/
-            },
-            
-            {
-              test:/\.s?css$/,
-              use: CssExtract.extract({
-                  use: [
-                    {
-                        loader:'css-loader',
-                        options:{
-                            sourceMap:true
-                        }
-                    },{
-                        loader:'sass-loader',
-                        options:{
-                            sourceMap:true
-                        }
-                    }
-                    
-                  ]
+  return {
+    entry: ["babel-polyfill", "./src/app.js"],
+    output: {
+      path: path.join(__dirname, "public", "dist"),
+      filename: "bundle.js"
+    },
 
-                  
-              })
-    
-            }
-           ]
+    module: {
+      rules: [
+        {
+          test: /\.js$/,
+          loader: "babel-loader",
+          exclude: /node_modules/
         },
 
-        plugins:[
-          CssExtract
-        ],
-    
-        devtool: isProduction ? 'source-map' : 'inline-source-map',
-      
-        devServer:{
-         contentBase: path.join(__dirname,'public'),
-         historyApiFallback: true,
-         publicPath:'/dist/'
+        {
+          test: /\.s?css$/,
+          use: CssExtract.extract({
+            use: [
+              {
+                loader: "css-loader",
+                options: {
+                  sourceMap: true
+                }
+              },
+              {
+                loader: "sass-loader",
+                options: {
+                  sourceMap: true
+                }
+              }
+            ]
+          })
         }
-    
+      ]
+    },
+
+    plugins: [CssExtract],
+
+    devtool: isProduction ? "source-map" : "inline-source-map",
+
+    devServer: {
+      contentBase: path.join(__dirname, "public"),
+      historyApiFallback: true,
+      publicPath: "/dist/"
     }
-
+  };
 };
-
-
-

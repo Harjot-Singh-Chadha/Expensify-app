@@ -1,0 +1,19 @@
+.header{
+    background-color: #364051;
+    padding: 10px 0px;
+}
+
+.header__content{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0px;
+}
+
+.header__title{
+    color: whitesmoke;
+    text-decoration: none;
+    h1{
+        margin: 0;
+    }
+}

@@ -1,0 +1,23 @@
+.page-header{
+
+    background-color: #f7f7ff;
+    padding: 35px 0px;
+    margin-bottom: 50px;
+
+}
+
+.page-header__title{
+margin: 0;
+font-weight: 300;
+letter-spacing: 2px;
+span{
+    font-weight: 600;
+}
+}
+
+.page-header__actions{
+   display: flex;
+   
+   justify-content: space-between;
+   margin-top: 20px;
+}

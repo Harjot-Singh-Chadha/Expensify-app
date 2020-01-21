@@ -1,44 +1,38 @@
 // EXPENSES_REDUCER
 
-const expensesReducerDefaultState = [] ;
+const expensesReducerDefaultState = [];
 
- const expensesReducer = (state = expensesReducerDefaultState ,action) => {
-    switch (action.type) {
-        case 'ADD_EXPENSE':
-        return [
-           ...state,
-           action.expense
-        ];
+const expensesReducer = (state = expensesReducerDefaultState, action) => {
+  switch (action.type) {
+    case "ADD_EXPENSE":
+      return [...state, action.expense];
 
-        case 'REMOVE_EXPENSE': 
-        return state.filter(({id})=> {
-            
-        return id !== action.id 
-        
-        })
-        
-        
-        case 'EDIT_EXPENSE': 
-        return state.map((expense)=> {
-           if(expense.id === action.id){
-               return {
-                   ...expense,
-                   ...action.updates
-               };  
-           } 
-           else {
-            return expense;
-        }  
-        });
+    case "REMOVE_EXPENSE":
+      return state.filter(({ id }) => {
+        return id !== action.id;
+      });
 
-        case 'Set_Expenses':
-        return action.expenses;
+    case "REMOVE_ALL_EXPENSE":
+      return [];
 
+    case "EDIT_EXPENSE":
+      return state.map(expense => {
+        if (expense.id === action.id) {
+          return {
+            ...expense,
+            ...action.updates
+          };
+        } else {
+          return expense;
+        }
+      });
 
-        default:
-            return state;
-    }
+    case "Set_Expenses":
+      return action.expenses;
 
+    default:
+      return state;
+  }
 };
 
-export default expensesReducer ; 
+export default expensesReducer;

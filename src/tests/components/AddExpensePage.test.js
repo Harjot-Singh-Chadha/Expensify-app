@@ -1,24 +1,24 @@
-import React from 'react';
-import { shallow } from 'enzyme';
-import  { AddExpensePage }  from '../../Components/AddExpensePage';
-import expenses from '../fixtures/expenses';
+import React from "react";
+import { shallow } from "enzyme";
+import { AddExpensePage } from "../../Components/AddExpensePage";
+import expenses from "../fixtures/expenses";
 
 let startAddExpense, history, wrapper;
 
 beforeEach(() => {
-   
   startAddExpense = jest.fn();
-   history = { push: jest.fn() };
-   wrapper = shallow(<AddExpensePage startAddExpense={startAddExpense} history = {history} />);
-
+  history = { push: jest.fn() };
+  wrapper = shallow(
+    <AddExpensePage startAddExpense={startAddExpense} history={history} />
+  );
 });
 
-test('Should render the AddExpense Page ', () => { 
+test("Should render the AddExpense Page ", () => {
   expect(wrapper).toMatchSnapshot();
 });
 
-test('Should handel on submit on AddExpense Page ', () => { 
-  wrapper.find('ExpenseForm').prop('onSubmit')(expenses[1]);
-  expect(history.push).toHaveBeenLastCalledWith('/');
+test("Should handel on submit on AddExpense Page ", () => {
+  wrapper.find("ExpenseForm").prop("onSubmit")(expenses[1]);
+  expect(history.push).toHaveBeenLastCalledWith("/dashboard");
   expect(startAddExpense).toHaveBeenLastCalledWith(expenses[1]);
 });

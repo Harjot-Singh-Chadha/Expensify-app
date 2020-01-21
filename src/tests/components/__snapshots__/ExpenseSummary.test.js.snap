@@ -1,27 +1,173 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Should render the ExpenseSummary component correctly with 1 expense 1`] = `
-<div>
-  <p>
-    Viewing 
-    1
-     
-    expense
-     totalling 
-    $2.35
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      Viewing 
+      <span>
+         
+        1
+         
+      </span>
+      expense
+       totalling
+      <span>
+         
+        $2.35
+         
+      </span>
+    </h1>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        to="/create"
+      >
+        Add Expense
+      </Link>
+      <button
+        className="button-removeAll"
+        onClick={[Function]}
+      >
+        Remove All
+      </button>
+      <Modal
+        ariaHideApp={false}
+        bodyOpenClassName="ReactModal__Body--open"
+        className="modal"
+        closeTimeoutMS={200}
+        contentLabel="Example Modal"
+        isOpen={false}
+        onRequestClose={[Function]}
+        parentSelector={[Function]}
+        portalClassName="ReactModalPortal"
+        role="dialog"
+        shouldCloseOnEsc={true}
+        shouldCloseOnOverlayClick={true}
+        shouldFocusAfterRender={true}
+        shouldReturnFocusAfterClose={true}
+      >
+        <div
+          className="modal-content__wrapper"
+        >
+          <h1
+            className="modal-content__title"
+          >
+            Are you sure
+          </h1>
+          <div
+            className="modal-content-button__wrapper"
+          >
+            <button
+              className="button"
+              onClick={[Function]}
+            >
+              Yes
+            </button>
+            <button
+              className="button"
+              onClick={[Function]}
+            >
+              No
+            </button>
+          </div>
+        </div>
+      </Modal>
+    </div>
+  </div>
 </div>
 `;
 
 exports[`Should render the ExpenseSummary component correctly with multiple expenses 1`] = `
-<div>
-  <p>
-    Viewing 
-    3
-     
-    expenses
-     totalling 
-    $332.24
-  </p>
+<div
+  className="page-header"
+>
+  <div
+    className="content-container"
+  >
+    <h1
+      className="page-header__title"
+    >
+      Viewing 
+      <span>
+         
+        3
+         
+      </span>
+      expenses
+       totalling
+      <span>
+         
+        $332.24
+         
+      </span>
+    </h1>
+    <div
+      className="page-header__actions"
+    >
+      <Link
+        className="button"
+        to="/create"
+      >
+        Add Expense
+      </Link>
+      <button
+        className="button-removeAll"
+        onClick={[Function]}
+      >
+        Remove All
+      </button>
+      <Modal
+        ariaHideApp={false}
+        bodyOpenClassName="ReactModal__Body--open"
+        className="modal"
+        closeTimeoutMS={200}
+        contentLabel="Example Modal"
+        isOpen={false}
+        onRequestClose={[Function]}
+        parentSelector={[Function]}
+        portalClassName="ReactModalPortal"
+        role="dialog"
+        shouldCloseOnEsc={true}
+        shouldCloseOnOverlayClick={true}
+        shouldFocusAfterRender={true}
+        shouldReturnFocusAfterClose={true}
+      >
+        <div
+          className="modal-content__wrapper"
+        >
+          <h1
+            className="modal-content__title"
+          >
+            Are you sure
+          </h1>
+          <div
+            className="modal-content-button__wrapper"
+          >
+            <button
+              className="button"
+              onClick={[Function]}
+            >
+              Yes
+            </button>
+            <button
+              className="button"
+              onClick={[Function]}
+            >
+              No
+            </button>
+          </div>
+        </div>
+      </Modal>
+    </div>
+  </div>
 </div>
 `;
