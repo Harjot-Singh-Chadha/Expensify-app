@@ -133,13 +133,7 @@
 
 /*------------------------------------------------------------------
 [ Responsive ]*/
-@media (max-width: 800px) {
-  *,
-  ::after,
-  ::before {
-    box-sizing: inherit;
-  }
-}
+
 @media (max-width: 800px) {
   .login-wrapper {
     justify-content: center;
@@ -181,7 +175,7 @@
   .login-right {
     padding-left: 15px;
     padding-right: 15px;
-    padding-top: 150px;
+    padding-top: 80px;
   }
 }
 
