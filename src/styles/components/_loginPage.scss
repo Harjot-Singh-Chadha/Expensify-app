@@ -13,7 +13,6 @@
 //     float: right;
 // }
 
-
 /*//////////////////////////////////////////////////////////////////
 [ login ]*/
 
@@ -23,7 +22,7 @@
 }
 
 .login-inner-container {
-  width: 100%;  
+  width: auto;
   min-height: 100vh;
   display: -webkit-box;
   display: -webkit-flex;
@@ -32,6 +31,8 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
+  justify-content: center;
+  text-align: center;
   align-items: center;
   padding: 20px;
   background: #f2f2f2;
@@ -49,7 +50,6 @@
   flex-wrap: wrap;
   align-items: stretch;
   flex-direction: row-reverse;
-
 }
 
 /*==================================================================
@@ -64,7 +64,7 @@
   background-position: center;
   position: relative;
   z-index: 1;
-  background: url('/images/bg.jpg');
+  background: url("/images/bg.jpg");
 }
 
 .login-left::before {
@@ -76,18 +76,15 @@
   height: 100%;
   top: 0;
   left: 0;
-  background: rgba(0,0,0,0.3);
-  background: url('/images/bg.jpg');
+  background: rgba(0, 0, 0, 0.3);
+  background: url("/images/bg.jpg");
 }
 
-.login-left__title{
-  
-    font-size: 35px;
-    font-family: cursive;
-    color: white;
-    margin: 0 auto;
-    
-    
+.login-left__title {
+  font-size: 35px;
+  font-family: cursive;
+  color: white;
+  margin: 0 auto;
 }
 
 .login-right {
@@ -98,11 +95,10 @@
   display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
-  padding:60px 115px 60px 115px;
-  
+  padding: 60px 115px 60px 115px;
 }
 
-.login-box{
+.login-box {
   display: flex;
   flex-direction: column;
   justify-content: space-around;
@@ -113,30 +109,81 @@
   border-radius: 10px;
   margin: 0 auto;
   border-radius: 3px;
-  background:#f2f2f2;
+  background: #f2f2f2;
 }
 
-.login-box__title{
-    padding-top: 25%;
-    font-size: 33px;
-    font-family: cursive;
-    
-    // margin: 0 0 20px 0;
-    
+.login-box__title {
+  padding-top: 25%;
+  font-size: 33px;
+  font-family: cursive;
+
+  // margin: 0 0 20px 0;
 }
 
-.login-box-sub__title{
+.login-box-sub__title {
   padding-bottom: 40px;
-  font-family:cursive;
+  font-family: cursive;
 }
 
-.text-below-login-button{
+.text-below-login-button {
   padding-bottom: 120px;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
   letter-spacing: 1px;
-  
 }
 
+/*------------------------------------------------------------------
+[ Responsive ]*/
+@media (max-width: 800px) {
+  *,
+  ::after,
+  ::before {
+    box-sizing: inherit;
+  }
+}
+@media (max-width: 800px) {
+  .login-wrapper {
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+
+    .login-left {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .login-box__title {
+    font-size: 5vw;
+  }
+}
+
+@media (max-width: 800px) {
+  .login-box {
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 800px) {
+  .login-right {
+    width: 60%;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+
+  .login-left {
+    width: 100%;
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .login-right {
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 150px;
+  }
+}
 
 // .login100-form-title {
 //   font-family: Poppins-Regular;
@@ -150,8 +197,6 @@
 //   width: 100%;
 //   display: block;
 // }
-
-
 
 // /*------------------------------------------------------------------
 // [ Input ]*/
@@ -170,7 +215,6 @@
 // .rs2-wrap-input100 {
 //   border-left: none;
 // }
-
 
 // .input100 {
 //   display: block;
@@ -225,8 +269,6 @@
 //   transform: scale(1);
 // }
 
-
-
 // /*------------------------------------------------------------------
 // [ Button ]*/
 // .container-login100-form-btn {
@@ -270,4 +312,3 @@
 // .login100-form-btn:hover {
 //   background: #333333;
 // }
-
