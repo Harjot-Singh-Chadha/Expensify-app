@@ -19,6 +19,7 @@ export class ExpenseListFilters extends React.Component {
       endDate: null
     };
   }
+  
 
   onDatesChange = ({ startDate, endDate }) => {
     this.setState({
