@@ -14,11 +14,17 @@ export class ExpenseListFilters extends React.Component {
     super(props);
 
     this.state = {
-      calendarFocused: null
+      calendarFocused: null,
+      startDate: null,
+      endDate: null
     };
   }
 
   onDatesChange = ({ startDate, endDate }) => {
+    this.setState({
+      startDate,
+      endDate
+    });
     this.props.setStartDate(startDate);
     this.props.setEndDate(endDate);
   };
@@ -65,9 +71,17 @@ export class ExpenseListFilters extends React.Component {
           <div className="input-group__item">
             {this.props.filters.sortBy === "date" && (
               <DateRangePicker
-                startDate={this.props.filters.startDate} // momentPropTypes.momentObj or null,
+                startDate={
+                  this.state.startDate === null
+                    ? this.state.startDate
+                    : this.props.filters.startDate
+                } // momentPropTypes.momentObj or null,
                 startDateId="your_unique_start_date_id" // PropTypes.string.isRequired,
-                endDate={this.props.filters.endDate} // momentPropTypes.momentObj or null,
+                endDate={
+                  this.state.endDate === null
+                    ? this.state.endDate
+                    : this.props.filters.endDate
+                } // momentPropTypes.momentObj or null,
                 endDateId="your_unique_end_date_id" // PropTypes.string.isRequired,
                 onDatesChange={this.onDatesChange} // PropTypes.func.isRequired,
                 focusedInput={this.state.calendarFocused} // PropTypes.oneOf([START_DATE, END_DATE]) or null,
